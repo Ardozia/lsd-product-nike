@@ -1,0 +1,25 @@
+.jordan {
+    width: 24px;
+    height: 24px;
+}
+
+.fs-7 {
+    font-size: 0.75rem;
+}
+
+.form-control:hover {
+    background-color: rgb(231, 231, 231);
+}
+
+.carousel-control-prev, .carousel-control-next {
+    width: 60px;
+    height: 60px;
+}
+
+.carousel-control-prev {
+    left: calc(100% - 140px);
+}
+
+.footer {
+    font-family: "Oswald", sans-serif;
+}

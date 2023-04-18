@@ -1,0 +1,50 @@
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../bootstrap-5.2.3/scss/functions";
+
+$primary: rgb(0, 0, 0);
+$secondary: rgb(211, 211, 211);
+// $success:       $green !default;
+$info: rgb(153, 46, 0);
+// $warning:       $yellow !default;
+// $danger:        $red !default;
+// $dark:          $gray-900 !default;
+
+// buttons
+$btn-padding-y: 1rem;
+$btn-font-size: 1rem;
+
+$btn-border-width: 1px;
+
+$btn-hover-bg-shade-amount:       100%;
+$btn-hover-bg-tint-amount:        0%;
+
+// inputs
+$input-bg: rgb(241, 241, 241);
+$input-btn-focus-box-shadow: transparent;
+
+// accordion
+$accordion-button-active-bg: white;
+$accordion-button-focus-border-color:   transparent;
+$accordion-button-focus-box-shadow:    transparent;
+$accordion-body-padding-x: 0;
+
+// Carousel
+$carousel-control-width: 90px;
+
+//import bs
+@import '../bootstrap-5.2.3/scss/bootstrap.scss';
+
+
+
+// Custom SCSS and CSS (overrides bs)
+.btn-outline-primary {   
+    --bs-btn-hover-bg: rgb(255, 255, 255);
+    --bs-btn-border-color: rgb(225, 225, 225);
+    --bs-btn-hover-color: black;
+}
+
+.btn-primary {
+    --bs-btn-hover-bg: #{tint-color(black, 40%)};
+}
+
+
