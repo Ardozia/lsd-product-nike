@@ -10,7 +10,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
   <link href="sass/custom-bootstrap.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
   <link href="sass/styles.css" rel="stylesheet" />
+  <style>
+     :root {
+      --swiper-navigation-size: 20px;
+     }
+  </style>
 </head>
 
 <body>
@@ -315,51 +321,37 @@
     <div class="container d-flex position-relative">
       <h4 class="py-4">Também poderás gostar de</h4>
       <div>
-        <button class="carousel-control-prev bg-secondary rounded-circle" type="button"
+        <button class="carousel-control-prev bg-secondary rounded-circle swiper-button-prev top-0 text-white" type="button"
           data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
+
         </button>
-        <button class="carousel-control-next bg-secondary rounded-circle" type="button"
+        <button class="carousel-control-next bg-secondary rounded-circle swiper-button-next top-0 text-white" type="button"
           data-bs-target="#carouselExampleControls" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
         </button>
       </div>
-
     </div>
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="row row-cols-3">
-            <div class="col">
-              <img src="./images/1.webp" class="img-fluid" alt="...">
-            </div>
-            <div class="col">
-              <img src="./images/2.webp" class="img-fluid" alt="...">
-            </div>
-            <div class="col">
-              <img src="./images/3.webp" class="img-fluid" alt="...">
-            </div>
-
-          </div>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="./images/1.webp" class="img-fluid" alt="...">
         </div>
-        <div class="carousel-item">
-          <div class="row row-cols-3">
-            <div class="col">
-              <img src="./images/1.webp" class="img-fluid" alt="...">
-            </div>
-            <div class="col">
-              <img src="./images/2.webp" class="img-fluid" alt="...">
-            </div>
-            <div class="col">
-              <img src="./images/3.webp" class="img-fluid" alt="...">
-            </div>
-
-          </div>
+        <div class="swiper-slide">
+          <img src="./images/2.webp" class="img-fluid" alt="...">
         </div>
+        <div class="swiper-slide">
+          <img src="./images/3.webp" class="img-fluid" alt="...">
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/1.webp" class="img-fluid" alt="...">
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/2.webp" class="img-fluid" alt="...">
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/3.webp" class="img-fluid" alt="...">
+        </div>
+
       </div>
-
     </div>
   </div>
 
@@ -407,11 +399,11 @@
         <div>
           <i class="bi bi-geo-alt-fill"></i>
           <a href="" class="p-2 link-light text-decoration-none">Portugal</a>
-          <span class="p-2 text-muted">Termos de Utilização</span>  
+          <span class="p-2 text-muted">Termos de Utilização</span>
         </div>
         <div>
           <a href="" class="text-muted p-2 text-decoration-none">Termos de Venda</a>
-          <a href="" class="text-muted p-2 text-decoration-none">Detalhes da Empresa</a>  
+          <a href="" class="text-muted p-2 text-decoration-none">Detalhes da Empresa</a>
         </div>
       </div>
 
@@ -422,6 +414,27 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
     crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script>
+
+    const swiper = new Swiper('.swiper', {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      //mousewheel: true,
+      keyboard: true,
+      loop: true,
+    });
+
+
+  </script>
 </body>
 
 </html>
