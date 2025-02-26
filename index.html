@@ -430,19 +430,25 @@
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   <script>
 
-        c    per = new Swiper('.swiper', {
-               View: 3,
-               een: 30,
-               tion arrows
-               n: {
-                 .swiper-button-next',
-                 .swiper-button-prev',
-                        n: {
-                 per-pagination",
-                        eel: true,
-                true,
-               e,
-        });
+    const swiper = new Swiper('.swiper', {
+      slidesPerView: 3,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination"
+      },
+      navigation: {
+        nextEl: ".carousel-control-prev",
+        prevEl: ".carousel-control-next",
+      },
+      spaceBetween: 30,
+      keyboard: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+
+
+    });
 
 
   </script>
